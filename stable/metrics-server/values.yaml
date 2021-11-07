@@ -94,7 +94,9 @@ securityContext:
   runAsUser: 10001
 
 service:
-  annotations: {}
+  annotations:
+    prometheus.io/port: "443"
+    prometheus.io/scrape: "true"
   labels: {}
   #  Add these labels to have metrics-server show up in `kubectl cluster-info`
   #  kubernetes.io/cluster-service: "true"
