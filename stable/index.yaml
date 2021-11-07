@@ -3,9 +3,9 @@ entries:
   metrics-server:
   - apiVersion: v1
     appVersion: 0.3.6
-    created: "2021-11-07T12:12:48.064532+02:00"
+    created: "2020-11-20T23:48:27.248440282+02:00"
     description: Metrics Server is a cluster-wide aggregator of resource usage data.
-    digest: fd12120b9984a909f1e2a2b5b3938af786889114f5920acc1f703f97eead7225
+    digest: c2338eab39c27de74061c205585d1ca301618dbb5194bab93edd088bf0eb3d9f
     home: https://github.com/kubernetes-incubator/metrics-server
     keywords:
     - metrics-server
@@ -15,4 +15,4 @@ entries:
     urls:
     - https://levkov.github.io/charts/stable/metrics-server-2.11.4.tgz
     version: 2.11.4
-generated: "2021-11-07T12:12:48.062432+02:00"
+generated: "2020-11-20T23:48:27.247808138+02:00"
