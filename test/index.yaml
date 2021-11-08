@@ -1,0 +1,36 @@
+apiVersion: v1
+entries:
+  metrics-server:
+  - annotations:
+      artifacthub.io/changes: |
+        - kind: added
+          description: "New defaultArgs value to enable overriding the default arguments."
+        - kind: changed
+          description: "Update Metrics Server image to v0.5.1."
+    apiVersion: v2
+    appVersion: 0.5.1
+    created: "2021-11-08T15:30:04.926985+02:00"
+    description: Metrics Server is a scalable, efficient source of container resource
+      metrics for Kubernetes built-in autoscaling pipelines.
+    digest: cd70deb81f0204e874e19654eaa8bc5edf598f41829a6f96fae73878328e401b
+    home: https://github.com/kubernetes-sigs/metrics-server
+    icon: https://avatars.githubusercontent.com/u/36015203?s=400&v=4
+    keywords:
+    - kubernetes
+    - metrics-server
+    - metrics
+    maintainers:
+    - name: stevehipwell
+      url: https://github.com/stevehipwell
+    - name: krmichel
+      url: https://github.com/krmichel
+    - name: endrec
+      url: https://github.com/endrec
+    name: metrics-server
+    sources:
+    - https://github.com/kubernetes-sigs/metrics-server
+    type: application
+    urls:
+    - https://levkov.github.io/charts/test/metrics-server-3.6.0.tgz
+    version: 3.6.0
+generated: "2021-11-08T15:30:04.922317+02:00"

@@ -1,19 +1,27 @@
 SHELL = bash
 
-all: kind test
+all: stable
+
+stable: kind deploy-stable
+
+test: kind deploy-test
 
 kind:
 	kind create cluster
 
-test: test-stable-metrics-server test-stable-nfs-server-provisioner
+deploy-stable: deploy-stable-metrics-server deploy-stable-nfs-server-provisioner
 
-test-stable-metrics-server:
+deploy-test: deploy-test-metrics-server
+
+deploy-stable-metrics-server:
 	helm install stable-metrics-server stable/metrics-server/ --set "args={--kubelet-insecure-tls, --kubelet-preferred-address-types=InternalIP}" --namespace kube-system
 
-test-stable-nfs-server-provisioner:
+deploy-stable-nfs-server-provisioner:
 	helm install stable-nfs-server-provisioner stable/nfs-server-provisioner/ --namespace kube-system
 
-package: package-stable-metrics-server package-stable-nfs-server-provisioner
+package-stable: package-stable-metrics-server package-stable-nfs-server-provisioner
+
+package-test: package-test-metrics-server
 
 package-stable-metrics-server:
 	cd $(CURDIR)/stable/ && helm package metrics-server/
@@ -21,8 +29,18 @@ package-stable-metrics-server:
 package-stable-nfs-server-provisioner:
 	cd $(CURDIR)/stable/ && helm package nfs-server-provisioner/
 
+package-test-metrics-server:
+	cd $(CURDIR)/test/ && helm package metrics-server/
+
 index-stable:
 	helm repo index stable --url https://levkov.github.io/charts/stable/
+
+index-test:
+	helm repo index test --url https://levkov.github.io/charts/test/
+
+deploy-test-metrics-server:
+	helm install test-metrics-server test/metrics-server/ --set "args={--kubelet-insecure-tls, --kubelet-preferred-address-types=InternalIP}" --namespace kube-system
+
 
 clean:
 	kind delete cluster
