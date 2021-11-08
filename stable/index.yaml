@@ -3,9 +3,9 @@ entries:
   metrics-server:
   - apiVersion: v1
     appVersion: 0.3.6
-    created: "2020-11-20T23:48:27.248440282+02:00"
+    created: "2021-11-08T09:39:00.169636+02:00"
     description: Metrics Server is a cluster-wide aggregator of resource usage data.
-    digest: c2338eab39c27de74061c205585d1ca301618dbb5194bab93edd088bf0eb3d9f
+    digest: 37c8bcaefc89821d937ff130769c22a8a7b693acd6a80d8dd4c16d0c0da9cff6
     home: https://github.com/kubernetes-incubator/metrics-server
     keywords:
     - metrics-server
@@ -15,4 +15,23 @@ entries:
     urls:
     - https://levkov.github.io/charts/stable/metrics-server-2.11.4.tgz
     version: 2.11.4
-generated: "2020-11-20T23:48:27.247808138+02:00"
+  nfs-server-provisioner:
+  - apiVersion: v1
+    appVersion: 2.3.0
+    created: "2021-11-08T09:39:00.170314+02:00"
+    deprecated: true
+    description: DEPRECATED - nfs-server-provisioner is an out-of-tree dynamic provisioner
+      for Kubernetes. You can use it to quickly & easily deploy shared storage that
+      works almost anywhere.
+    digest: 36b7b827f4a3792a3653bf64af8bd4e8fd5260693e745b76095b29a21f9bf1e1
+    home: https://github.com/kubernetes/charts/tree/master/stable/nfs-server-provisioner
+    keywords:
+    - nfs
+    - storage
+    name: nfs-server-provisioner
+    sources:
+    - https://github.com/kubernetes-incubator/external-storage/tree/master/nfs
+    urls:
+    - https://levkov.github.io/charts/stable/nfs-server-provisioner-1.1.3.tgz
+    version: 1.1.3
+generated: "2021-11-08T09:39:00.168619+02:00"
