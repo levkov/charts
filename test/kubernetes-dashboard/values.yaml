@@ -1,0 +1,3 @@
+hostname: dashboard
+dashboard_image: kubernetesui/dashboard:v2.4.0
+metrics_scraper_image: kubernetesui/metrics-scraper:v1.0.7

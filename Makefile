@@ -38,6 +38,9 @@ package-test-metrics-server:
 package-test-nfs-server-provisioner:
 	cd $(CURDIR)/test/ && helm package nfs-server-provisioner/
 
+package-test-kubernetes-dashboard:
+	cd $(CURDIR)/test/ && helm package kubernetes-dashboard/
+
 index-stable:
 	helm repo index stable --url https://levkov.github.io/charts/stable/
 
@@ -49,6 +52,9 @@ deploy-test-metrics-server:
 
 deploy-test-nfs-server-provisioner:
 	helm install test-nfs-server-provisioner test/nfs-server-provisioner/ --namespace kube-system
+
+deploy-test-kubernetes-dashboard:
+	helm install test-kubernetes-dashboard test/kubernetes-dashboard/ --namespace kubernetes-dashboard
 
 clean:
 	kind delete cluster || true && k3d cluster delete || true
