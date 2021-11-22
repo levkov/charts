@@ -24,7 +24,7 @@ deploy-stable-nfs-server-provisioner:
 
 package-stable: package-stable-metrics-server package-stable-nfs-server-provisioner
 
-package-test: package-test-metrics-server package-test-nfs-server-provisioner
+package-test: package-test-metrics-server package-test-nfs-server-provisioner package-test-kubernetes-dashboard
 
 package-stable-metrics-server:
 	cd $(CURDIR)/stable/ && helm package metrics-server/
@@ -54,7 +54,7 @@ deploy-test-nfs-server-provisioner:
 	helm install test-nfs-server-provisioner test/nfs-server-provisioner/ --namespace kube-system
 
 deploy-test-kubernetes-dashboard:
-	helm install test-kubernetes-dashboard test/kubernetes-dashboard/ --namespace kubernetes-dashboard
+	helm install test-kubernetes-dashboard test/kubernetes-dashboard/ --set ip=127.0.0.1 --namespace kubernetes-dashboard
 
 clean:
 	kind delete cluster || true && k3d cluster delete || true

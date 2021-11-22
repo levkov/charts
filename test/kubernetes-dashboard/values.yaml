@@ -1,3 +1,4 @@
 hostname: dashboard
+ip: 127.0.0.1
 dashboard_image: kubernetesui/dashboard:v2.4.0
 metrics_scraper_image: kubernetesui/metrics-scraper:v1.0.7

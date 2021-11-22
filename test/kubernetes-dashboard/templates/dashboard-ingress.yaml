@@ -13,3 +13,10 @@ spec:
         backend:
           serviceName: kubernetes-dashboard
           servicePort: 80
+  - host: {{ .Values.ip }}.nip.io
+    http:
+      paths:
+      - path: /
+        backend:
+          serviceName: kubernetes-dashboard
+          servicePort: 80
