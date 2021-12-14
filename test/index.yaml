@@ -3,7 +3,7 @@ entries:
   kubernetes-dashboard:
   - apiVersion: v1
     appVersion: 2.4.0
-    created: "2021-12-14T23:19:30.432598+02:00"
+    created: "2021-12-14T23:23:11.715215+02:00"
     description: Dashboard chart
     digest: 7119a3f07301813dcad0fbdfe643700203e779c7c8ee59a08d27a17ce0115299
     name: kubernetes-dashboard
@@ -12,11 +12,11 @@ entries:
     version: 2.4.0
   metrics-server:
   - apiVersion: v2
-    appVersion: 0.4.0
-    created: "2021-12-14T23:19:30.433754+02:00"
+    appVersion: 0.4.1
+    created: "2021-12-14T23:23:11.715867+02:00"
     description: Metrics Server is a scalable, efficient source of container resource
       metrics for Kubernetes built-in autoscaling pipelines.
-    digest: c5fc5c1d36f68a6d7afaacfcdd7553ebd994b5b86fb43dcbf524dbdfd3f959fb
+    digest: f8a9f6ca0414af32fa7940513f8b214f0dc437891b232f483a17caceef9091a2
     home: https://github.com/kubernetes-sigs/metrics-server
     icon: https://avatars.githubusercontent.com/u/36015203?s=400&v=4
     keywords:
@@ -28,12 +28,12 @@ entries:
     - https://github.com/kubernetes-sigs/metrics-server
     type: application
     urls:
-    - https://levkov.github.io/charts/test/metrics-server-0.4.0.tgz
-    version: 0.4.0
+    - https://levkov.github.io/charts/test/metrics-server-0.4.1.tgz
+    version: 0.4.1
   nfs-server-provisioner:
   - apiVersion: v1
     appVersion: 3.0.0
-    created: "2021-12-14T23:19:30.434482+02:00"
+    created: "2021-12-14T23:23:11.717673+02:00"
     description: nfs-server-provisioner is an out-of-tree dynamic provisioner for
       Kubernetes. You can use it to quickly & easily deploy shared storage that works
       almost anywhere.
@@ -55,4 +55,4 @@ entries:
     urls:
     - https://levkov.github.io/charts/test/nfs-server-provisioner-1.3.1.tgz
     version: 1.3.1
-generated: "2021-12-14T23:19:30.432109+02:00"
+generated: "2021-12-14T23:23:11.713392+02:00"
